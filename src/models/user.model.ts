@@ -18,10 +18,12 @@ const userSchema = new mongoose.Schema({
   isVerified: {
     type: Boolean,
     require: [true, "Username is Required"],
+    default: false,
   },
   isAdmin: {
     type: Boolean,
     require: [true, "isAdmin is Required"],
+    default: false,
   },
   forgetPasswordToken: String,
   forgetPasswordTokenExpiry: Date,

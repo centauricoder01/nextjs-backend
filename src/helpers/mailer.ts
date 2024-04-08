@@ -28,11 +28,14 @@ export const sendEmail = async ({ email, emailType, userId }: any) => {
     });
 
     const mailingOptions = {
-      from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>',
-      to: "bar@example.com, baz@example.com",
+      from: {
+        name: "Rajendra patel",
+        address: "459015312be77a",
+      },
+      to: email,
       subject: "Hello ✔",
       text: "Hello world?",
-      html: "<b>Hello world?</b>",
+      html: "<b>Kya hal Bhai?</b>",
     };
 
     const info = await transporter.sendMail(mailingOptions);
